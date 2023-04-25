@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Название вашей компании - агентство недвижимости</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Подключение стилей Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Подключение стилей для вашего сайта -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Навигационная панель -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Бренд и переключатель мобильного меню -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Название вашей компании</a>
+      </div>
+
+      <!-- Ссылки на страницы сайта -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#about-us">О компании</a></li>
+          <li><a href="#our-advantages">Наши преимущества</a></li>
+          <li><a href="#guarantee">Гарантия</a></li>
+          <li><a href="#delivery">Условия доставки</a></li>
+          <li><a href="#contact-us">Связаться с нами</a></li>
+        </ul>
+
+        <!-- Форма поиска -->
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Поиск...">
+          </div>
+          <button type="submit" class="btn btn-default">Найти</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Шапка сайта -->
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Ваш слоган или заголовок</h1>
+      <p>Краткое описание вашего бизнеса или специализации</p>
+      <a href="#contact-us" class="btn btn-primary btn-lg">Свяжитесь с нами</a>
+    </div>
+  </header>
+
+  <!-- О компании -->
+  <section id="about-us" class="container">
+    <h2>О компании</h2>
+    <p>Расскажите о своей компании, истории, миссии и ценностях. Представьте сотрудников и их компетенции. Укажите свои преимущества и опыт в работе с недвижимостью. Можете использовать фотографии и видео для более наглядного представления.</p>
+    <!-- Наши преимущества -->
+    <section id="our-advantages" class="container-fluid">
+      <h2>Наши преимущества</h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Преимущество 1</h3>
+          <p>Описание вашего преимущества</p>
+        </div>
+        <div class="col-sm-4">
+          <h3>Преимущество 2</h3>
+          <p>Описание вашего преимущества</p>
+        </div>
+        <div class="col-sm-4">
+          <h3>Преимущество 3</h3>
+          <p>Описание вашего преимущества</p>
+        </div>
+      </div>
+    </section>
+    <!-- Гарантия -->
+    <section id="guarantee" class="container">
+      <h2>Гарантия</h2>
+      <p>Описание ваших гарантий и условий возврата</p>
+    </section>
+    <!-- Связаться с нами -->
+    <section id="contact-us" class="container">
+      <h2>Связаться с нами</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Имя:</label>
+          <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Введите ваш email">
+        </div>
+        <div class="form-group">
+          <label for="message">Сообщение:</label>
+          <textarea class="form-control" id="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+    </section>
+    <!-- Футер -->
+    <footer class="container-fluid text-center">
+      <p>Название вашей компании - агентство недвижимости &copy; 2023</p>
+    </footer>
+    <!-- Подключение библиотек и скриптов -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Скрипт для анимации при прокрутке -->
+    <script>
+      $(document).ready(function(){
+// Добавляем класс "animate" к элементам с атрибутом "data-animate"
+        $('[data-animate]').addClass('animate');
+
+// Анимация при прокрутке
+        $(window).scroll(function() {
+          $('[data-animate]').each(function() {
+            if ($(this).offset().top < $(window).scrollTop() + $(window).height() * 0.9) {
+              $(this).addClass('animated ' + $(this).data('animate'));
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+  </html>
