@@ -37,7 +37,6 @@
 			justify-content: center;
 			align-items: center;
 			padding: 50px;
-			overflow: auto;
 		}
 		.item {
 			width: 350px;
@@ -50,7 +49,7 @@
 			text-align: center;
 			transition: all 0.2s ease-in-out;
 			position: relative;
-			overflow: hidden;
+			overflow: auto;
 		}
 		.item:hover {
 			transform: scale(1.05);
@@ -85,6 +84,25 @@
 			font-size: 16px;
 			line-height: 1.4;
 		}
+		.portfolio-container {
+			max-height: 500px;
+			overflow: auto;
+		}
+		::-webkit-scrollbar {
+   			display: none;
+		}
+		a {
+			text-decoration: none; /* убираем подчеркивание по умолчанию */
+			color: #333; /* устанавливаем цвет ссылок */
+			transition: color 0.3s ease-in-out; /* добавляем плавное изменение цвета при наведении */
+		}
+
+		a:hover {
+			text-decoration: underline; /* добавляем подчеркивание при наведении */
+			color: #f00; /* изменяем цвет ссылок при наведении */
+		}
+
+
 	</style>
 </head>
 <body>
@@ -92,28 +110,30 @@
 		<h1>Мое портфолио</h1>
 	</div>
 	<div class="container">
-		<div class="item">
-			<img src="Example.png" alt="Пример работы">
-<h2>Строительная компания</h2>
-<p>Описание работы 1</p>
-<a href="https://github.com/rrmm3735/BC/deployments/activity_log?environment=github-pages">Ссылка на работу</a>
-<h2>Магазин электроники</h2>
-<p>Описание работы 2</p>
-<a href="https://github.com/rrmm3735/ElShop/deployments/activity_log?environment=github-pages">Ссылка на работу</a>
-<h2>Магазин кроссовок</h2>
-<p>Описание работы 3</p>
-<a href="https://github.com/rrmm3735/SnShop/deployments/activity_log?environment=github-pages">Ссылка на работу</a>
-<h2>Агентство недвижимости вариант 1</h2>
-<p>Описание работы 3</p>
-<a href="https://github.com/rrmm3735/Realty1/deployments/activity_log?environment=github-pages">Ссылка на работу</a>
-			<h2>Агентство недвижимости вариант 2</h2>
-<p>Описание работы 3</p>
-<a href="https://github.com/rrmm3735/Realty2/deployments/activity_log?environment=github-pages">Ссылка на работу</a>
-      <h2>Разработка ПО</h2>
-<p>Описание работы 3</p>
-<a href="https://github.com/rrmm3735/SW/deployments/activity_log?environment=github-pages">Ссылка на работу</a>
-<!-- Добавьте сюда дополнительные секции для каждой работы, если это необходимо -->
-</div> <!-- Закрытие секции портфолио -->
-</div> <!-- Закрытие основного контейнера -->
+		<div class="portfolio-container">
+			<div class="item">
+				<img src="Example.png" alt="Пример работы">
+				<h2>Строительная компания</h2>
+				<p>Описание работы 1</p>
+				<a href="https://rrmm3735.github.io/BC/" target="_blank">Ссылка на работу</a>
+				<h2>Магазин электроники</h2>
+				<p>Описание работы 2</p>
+				<a href="https://rrmm3735.github.io/ElShop/">Ссылка на работу</a>
+				<h2>Магазин кроссовок</h2>
+				<p>Описание работы 3</p>
+				<a href="https://rrmm3735.github.io/SnShop/" target="_blank">Ссылка на работу</a>
+				<h2>Агентство недвижимости вариант 1</h2>
+				<p>Описание работы 3</p>
+				<a href="https://rrmm3735.github.io/Realty1/" target="_blank">Ссылка на работу</a>
+				<h2>Агентство недвижимости вариант 2</h2>
+				<p>Описание работы 3</p>
+				<a href="https://rrmm3735.github.io/Realty2/" target="_blank">Ссылка на работу</a>
+				<h2>Разработка ПО</h2>
+				<p>Описание работы 3</p>
+				<a href="https://rrmm3735.github.io/SW/" target="_blank">Ссылка на работу</a>
+			</div>
+			<!-- Добавьте сюда дополнительные секции для каждой работы, если это необходимо -->
+		</div> <!-- Закрытие секции портфолио -->
+	</div> <!-- Закрытие основного контейнера -->
 </body>
 </html>
