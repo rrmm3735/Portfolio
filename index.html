@@ -3,7 +3,7 @@
 <head>
 	<title>Портфолио</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap">
 	<style>
 		body {
@@ -15,7 +15,14 @@
 			margin: 0;
 			padding: 0;
 		}
+
+		.main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 		.header {
+
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -25,18 +32,51 @@
 			position: sticky;
 			top: 0;
 			z-index: 1;
+
 		}
+
 		.header h1 {
 			font-size: 36px;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 		}
+		h1, h2, h3, h4, h5, h6 {
+			font-size: 2rem;
+		}
+		.navbar-nav li {
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
 		.container {
+			width: 100%;
+			max-width: 100%;
+			margin: 0 auto;
+			padding: 0 20px;
+			box-sizing: border-box;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
-			padding: 50px;
+		}
+		.portfolio-item {
+			margin-bottom: 40px;
+		}
+		@media (max-width: 768px) {
+			.container {
+				padding: 0 10px;
+			}
+			.main {
+				padding-top: 80px;
+			}
+			.navbar-nav li {
+				margin-right: 0;
+			}
+			.portfolio-item {
+				margin-bottom: 20px;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-size: 1.5rem;
+			}
 		}
 		.item {
 			width: 350px;
@@ -53,22 +93,6 @@
 		}
 		.item:hover {
 			transform: scale(1.05);
-		}
-		.item:before {
-			content: '';
-			background-color: rgba(255, 255, 255, 0.1);
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 0;
-			transition: all 0.2s ease-in-out;
-			opacity: 0.5;
-			transform: translate(-100%, 0);
-		}
-		.item:hover:before {
-			transform: translate(0, 0);
 		}
 		.item img {
 			max-width: 100%;
@@ -89,11 +113,11 @@
 			overflow: auto;
 		}
 		::-webkit-scrollbar {
-   			display: none;
+			display: none;
 		}
 		a {
 			text-decoration: none; /* убираем подчеркивание по умолчанию */
-			color: #333; /* устанавливаем цвет ссылок */
+			color: #2f4f4f; /* устанавливаем цвет ссылок */
 			transition: color 0.3s ease-in-out; /* добавляем плавное изменение цвета при наведении */
 		}
 
@@ -102,6 +126,50 @@
 			color: #f00; /* изменяем цвет ссылок при наведении */
 		}
 
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.scroll-down span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: -4px 0 0 -4px;
+  animation: scroll-down 1.5s infinite;
+  opacity: 0.8;
+}
+
+.scroll-down span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.scroll-down span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
 
 	</style>
 </head>
@@ -114,26 +182,24 @@
 			<div class="item">
 				<img src="Example.png" alt="Пример работы">
 				<h2>Строительная компания</h2>
-				<p>Описание работы 1</p>
 				<a href="https://rrmm3735.github.io/BC/" target="_blank">Ссылка на работу</a>
 				<h2>Магазин электроники</h2>
-				<p>Описание работы 2</p>
-				<a href="https://rrmm3735.github.io/ElShop/">Ссылка на работу</a>
+				<a href="https://rrmm3735.github.io/ElShop/" target="_blank">Ссылка на работу</a>
 				<h2>Магазин кроссовок</h2>
-				<p>Описание работы 3</p>
 				<a href="https://rrmm3735.github.io/SnShop/" target="_blank">Ссылка на работу</a>
 				<h2>Агентство недвижимости вариант 1</h2>
-				<p>Описание работы 3</p>
 				<a href="https://rrmm3735.github.io/Realty1/" target="_blank">Ссылка на работу</a>
 				<h2>Агентство недвижимости вариант 2</h2>
-				<p>Описание работы 3</p>
 				<a href="https://rrmm3735.github.io/Realty2/" target="_blank">Ссылка на работу</a>
 				<h2>Разработка ПО</h2>
-				<p>Описание работы 3</p>
 				<a href="https://rrmm3735.github.io/SW/" target="_blank">Ссылка на работу</a>
 			</div>
-			<!-- Добавьте сюда дополнительные секции для каждой работы, если это необходимо -->
+		<!-- Добавьте сюда дополнительные секции для каждой работы, если это необходимо -->
 		</div> <!-- Закрытие секции портфолио -->
 	</div> <!-- Закрытие основного контейнера -->
+
+				<div class="scroll-down">
+		<span></span>
+	</div>
 </body>
 </html>
